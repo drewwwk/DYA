@@ -1,0 +1,217 @@
+header
+    height: 170px
+
+nav
+    display: flex
+    width: 100%
+    height: 95px
+    background-color: $main-color
+
+.menu
+    display: flex
+    height: 95px
+    justyfy-content: space-between
+    list-style-type: none
+    padding-top: 18px 
+    &_link
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff  
+        font-size: 20px
+        font-weight: 400
+        padding: 0 12px
+        text-align: center
+        line-height: 28px
+        &:hover
+            text-decoration: none
+            color: $sec-color
+    &_item
+        width: 170px
+        text-align: center
+        height: 95px
+        &:first-child
+            margin-right: 148px
+
+.subheader
+    display: flex
+    height: 75px
+    background-color: $sec-color
+    &_phone
+        display: block
+        font-size: 36px
+        margin-top: 12px
+        color: $main-color
+        font-weight: 400
+        text-align: left
+        &:hover
+            text-decoration: none
+            color: $main-color
+            font-weight: 700
+    &_call
+        display: block
+        text-align: center
+        font-size: 18px
+        color: $main-color
+        font-weight: 400
+        margin-top: 10px
+        margin-left: 54px
+    &_or
+        display: block
+        text-align: center
+        font-size: 36px
+        font-weight: 400
+        color: $main-color
+        margin-top: 8px
+    &_btn
+        background-color: $main-color
+        width: 120px
+        height: 50px
+        color: #ffffff
+        font-size: 16px
+        font-weight: 700
+        margin-top: 10px
+        padding: 2px 0
+        line-height: 16px
+        border-radius: 26px
+        +btn_hover
+
+.list
+    min-height: 864px
+    background: linear-gradient(rgba(190,219,226,0.1), rgba(255,255,255,0.99)), $sec-color
+    padding: 24px 0 79px 0
+    .label
+        position: relative
+        margin-top: 8px
+        color: $main-color
+        font-size: 36px
+        font-weight: 700
+        text-align: center
+    .row
+        margin-top: 32px
+    &_item 
+        position: relative
+        width: 320px
+        height: 280px
+        margin: 0 auto
+        margin-bottom: 19px
+        padding-top: 92px
+        &_1
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('../img/mite.jpg') center (center / cover) no-repeat
+        &_2
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('../img/ant.jpg') center (center / cover) no-repeat
+        &_3
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('../img/mold.jpg') center (center / cover) no-repeat
+        &_4
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('../img/rat.jpg') center (center / cover) no-repeat
+        &_5
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('../img/wasp.jpg') center (center / cover) no-repeat
+        &_6
+            background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.8)), url('../img/moth.jpg') center (center / cover) no-repeat
+        &_subtitle
+            color: $sec-color
+            font-size: 24px
+            font-weight: 400
+            line-height: 31px
+            text-transform: uppercase
+            text-align: center
+            z-index: 2
+        &_plus
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            bottom: 35px
+            left: 50%
+            transform: translateX(-50%)
+            width: 36px
+            height: 36px
+            background-color: #000000
+            margin: 0 auto
+            border-radius: 100%
+            cursor: pointer
+            &:before
+                content: ''
+                display: block
+                width: 18px
+                height: 2px
+                background-color: $main-color
+                transition: 0.3s all
+            &:after
+                content: ''
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                display: block
+                height: 18px
+                width: 2px
+                background-color: $main-color
+                transition: 0.3s all
+            &:hover
+                &:before, &:after
+                    background-color: $sec-color
+.order
+    min-height: 864px
+    background: linear-gradient(rgba(255,255,255,0.99), rgba(40,135,159,0.1)), $main-color
+    padding: 24px 0 79px 0
+    &_title
+        color: $main-color
+        font-size: 24px
+        margin-top: 18px
+    &_label
+        position: relative
+        margin-top: 8px
+        color: $main-color
+        font-size: 36px
+        font-weight: 700
+        text-align: center
+        margin-bottom: 18px
+    .radio
+        margin: 16px 0
+        padding: 10px 20px
+        display: block
+        cursor: pointer
+        input 
+            display: none
+            & + span
+                line-height: 22px
+                height: 22px
+                padding-left: 22px
+                display: block
+                position: relative
+                &:not(:empty)
+                    padding-left: 22px + 8
+                &:before,
+                &:after
+                    content: ''
+                    width: 22px
+                    height: 22px
+                    display: block
+                    border-radius: 50%
+                    left: 0
+                    top: 0
+                    position: absolute
+                &:before
+                    background: $sec-color
+                    transition: background .2s ease, transform .4s cubic-bezier(.175, .885, .32, 2)
+                &:after
+                    background: #fff
+                    transform: scale(.78)
+                    transition: transform .6s cubic-bezier(.175, .885, .32, 1.4)
+            &:checked + span
+                &:before
+                    transform: scale(1.04)
+                    background: $main-color
+                &:after
+                    transform: scale(.4)
+                    transition: transform .3s ease
+        &:hover
+            input
+                & + span
+                    &:before
+                        transform: scale(.92)
+                    &:after
+                        transform: scale(.74)
+                &:checked + span
+                    &:after
+                        transform: scale(.4)

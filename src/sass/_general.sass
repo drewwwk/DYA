@@ -163,16 +163,10 @@ nav
                 &:before, &:after
                     background-color: $sec-color
 .order
-    min-height: 864px
+    min-height: 722px
     background: linear-gradient(rgba(255,255,255,0.99), rgba(40,135,159,0.1)), $main-color
     padding: 24px 0 79px 0
     &_title
-        display: flex
-        color: $main-color
-        font-size: 24px
-        margin-top: 8px
-        line-height: 24px
-    &_label
         position: relative
         margin-top: 8px
         color: $main-color
@@ -180,79 +174,100 @@ nav
         font-weight: 700
         text-align: center
         margin-bottom: 18px
-    &_location
+    label
+        margin-top: 15px 
+        font-size: 20px
+        font-weight: 400
+        color: $main-color
+    input
         display: flex
-        align-items: center
-    &_issue
+        justify-content: space-between
+        width: 350px
+    #order_confirm
+        background-color: $main-color
+        color: #ffffff
+        width: 200px
+        height: 45px
+        margin: 0 82px 0 18px
+        margin-top: 22px
+        border: 1px solid #000
+        border-radius: 5px
+    #order_reset
+        background-color: #e44c4c
+        color: #ffffff
+        border-radius: 5px
+        width: 150px
+        height: 35px
+        // margin: 0 auto
+        margin-top: 28px
+        border: 1px solid #000
         display: flex
-        align-items: center
-    &_square
-        margin: 32px 0
+        text-align: center
+        align-content: center
+        justify-content: center
+    span 
+        color: #000000
+        font-size: 18px
+        font-weight: 300
+    &_radio
         display: flex
+        flex-direction: column
+        align-content: center
+    &_comment
+        display: flex
+        justify-content: flex
         align-items: center
+        label
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: space-between
+            color: $main-color
+        textarea
+            resize: none
+            width: 445px
+            height: 135px
+    #order_price
+        margin-top: 70px
+        width: 150px
+        height: 40px
         input
             display: flex
-            margin-top: 20px
-    &_info
+            justify-content: space-between
+    &_subtitle
+        margin-top: 70px
         display: flex
-        align-items: center
-        margin-top: 32px
-        margin-left: 32px
-        input
-            display: flex
-            margin-top: 20px
-            width: 450px
-    &_price
-        input
-            display: flex
-            margin-top: 20px
-    .radio
-        margin: 32px 20px
-        padding: 10px 0
+        justify-content: flex-end
+        color: $main-color
+        font-size: 30px
+        font-weight: 700
+.team
+    min-height: 722px
+    padding: 42px 0 0 0
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(22,75,88,0.4)), url('../img/team.jpg') center (center / cover) no-repeat
+    &_title
+        position: relative
+        color: $main-color
+        font-size: 36px
+        font-weight: 700
+        text-align: center
+    &_subtitle
+        color: #fff
+        font-size: 24px
+        font-weight: 400
+        line-height: 31px
+        text-align: center
+        z-index: 2
+        &_1
+            margin-top: 84px
+            color: $main-color
+    &_btn
         display: block
-        cursor: pointer
-        input 
-            display: none
-            & + span
-                line-height: 22px
-                height: 22px
-                padding-left: 22px
-                display: block
-                position: relative
-                &:not(:empty)
-                    padding-left: 22px + 8
-                &:before,
-                &:after
-                    content: ''
-                    width: 22px
-                    height: 22px
-                    display: block
-                    border-radius: 50%
-                    left: 0
-                    top: 0
-                    position: absolute
-                &:before
-                    background: $sec-color
-                    transition: background .2s ease, transform .4s cubic-bezier(.175, .885, .32, 2)
-                &:after
-                    background: #fff
-                    transform: scale(.78)
-                    transition: transform .6s cubic-bezier(.175, .885, .32, 1.4)
-            &:checked + span
-                &:before
-                    transform: scale(1.04)
-                    background: $main-color
-                &:after
-                    transform: scale(.4)
-                    transition: transform .3s ease
-        &:hover
-            input
-                & + span
-                    &:before
-                        transform: scale(.92)
-                    &:after
-                        transform: scale(.74)
-                &:checked + span
-                    &:after
-                        transform: scale(.4)
-        
+        background-color: $main-color
+        color: #ffffff
+        width: 200px
+        height: 45px
+        margin: 22px auto
+        border: 1px solid #000
+        border-radius: 5px
+

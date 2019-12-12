@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>DEZZA</title>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -18,11 +22,10 @@
                 
                 <ul class="menu">
                     <li class="menu_item"><a href="#" class="menu_logo"><img src="./img/logo.png" alt="logo"></a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">СПИСОК УСЛУГ</a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">ОФОРМИТЬ ЗАКАЗ</a></li>
-                    <li class="menu_item"><a href="#" class="menu_link">НАША КОМАНДА</a></li>
-                    <li class="menu_item">
-                    </li>
+                    <li class="menu_item"><a href="#list" class="menu_link">СПИСОК УСЛУГ</a></li>
+                    <li class="menu_item"><a href="#order" class="menu_link">ОФОРМИТЬ ЗАКАЗ</a></li>
+                    <li class="menu_item"><a href="#team" class="menu_link">НАША КОМАНДА</a></li>
+                    <li class="menu_item"><a href="authentication.html" class="menu_link">ВОЙТИ</a></li>
                 </ul>
                                 
             </div>
@@ -49,7 +52,7 @@
 
     <section class="list">
 
-        <div class="container">
+        <div class="container" id="list">
                 <div class="label">НАШИ УСЛУГИ</div>
                 <div class="subtitle">Дезинсекция в Минске сертифицированной командой</div>
             <div class="row">
@@ -106,7 +109,7 @@
 
     </section>
 
-    <section class="order">
+    <section class="order" id="order">
         <div class="order_title">РАССЧЁТ ЦЕНЫ И ОФОРМЛЕНИЕ ЗАКАЗА</div>
         <div class="container">
 
@@ -176,7 +179,7 @@
         </div>
     </section>
 
-    <section class="team">
+    <section class="team" id="team">
     <div class="container">
 
         <div class="team_title">НАША КОМАНДА</div>
@@ -187,6 +190,7 @@
         
     </div>
     </section>
-    
+
 </body>
+
 </html>

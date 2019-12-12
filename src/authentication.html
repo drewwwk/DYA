@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DEZZA</title>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="container">
+                
+                <ul class="menu">
+                    <li class="menu_item"><a href="index.html" class="menu_logo"><img src="./img/logo.png" alt="logo"></a></li>
+                    <li class="menu_item"><a href="index.html#list" class="menu_link">СПИСОК УСЛУГ</a></li>
+                    <li class="menu_item"><a href="index.html#order" class="menu_link">ОФОРМИТЬ ЗАКАЗ</a></li>
+                    <li class="menu_item"><a href="index.html#team" class="menu_link">НАША КОМАНДА</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link"></a></li>
+                </ul>
+                                
+            </div>
+        </nav>
+    </header>
+
+    <div class="col-md-5 offset-md-1" style="margin-top: 50px;">
+        <label for="login_email" class="login_forms">
+        <input required placeholder="email" type="email" name="email" id="email">
+        </label>
+        <label for="login_password" class="login_forms">
+        <input required placeholder="password" type="password" name="password" id="password">
+        </label>
+        <button><a id="button">Войти</a></button>
+    </div>
+
+    <h1 style="text-align: center; margin-top: 50px; color: red" id='error_handler'></h1>
+
+    <script src="js/modules/auth.js"></script>
+
+</body>
+
+
+</html>
